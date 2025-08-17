@@ -9,20 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.7",
-    "@heroicons/react": "^2.2.0",
-    "@react-google-maps/api": "^2.20.7",
-    "aos": "^2.3.4",
     "framer-motion": "^12.23.12",
     "next": "15.4.5",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-icons": "^5.5.0",
-    "react-scroll": "^1.9.3",
-    "react-slick": "^0.30.3",
-    "react-whatsapp-button": "^2.0.0",
-    "react-whatsapp-widget": "^2.2.0",
-    "slick-carousel": "^1.8.1"
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

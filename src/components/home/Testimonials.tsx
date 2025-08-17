@@ -94,7 +94,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimoni
           transition={{ delay: index * 0.1 + 0.3 }}
           className="text-gray-700 mt-4 mb-6 leading-relaxed italic"
         >
-          "{testimonial.content}"
+          "          &quot;{testimonial.content}&quot;"
         </motion.p>
 
         <div className="flex items-center gap-4">
@@ -150,7 +150,7 @@ const Testimonials = () => {
             What Our Clients Say About Us
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders say about our services.
+            Don&apos;t just take our word for it. Here&apos;s what industry leaders say about our services.
           </p>
         </motion.div>
 
@@ -168,7 +168,7 @@ const Testimonials = () => {
               className="flex transition-transform duration-300"
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="w-full flex-shrink-0 px-4">
                   <TestimonialCard testimonial={testimonial} index={0} />
                 </div>

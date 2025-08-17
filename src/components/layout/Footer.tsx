@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useState, type ReactNode } from 'react';
+import { useState } from 'react';
 
 // Social media links data with actual URLs
 const socialLinks = [

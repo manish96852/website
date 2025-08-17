@@ -5,12 +5,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const Hero = () => {
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
-  };
-
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-[#001B44] via-[#002B69] to-[#001B44] text-white overflow-hidden">
       {/* Background Pattern */}
@@ -35,7 +29,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-blue-100">
-              India's leading provider of enterprise-grade networking solutions. From MPLS to cybersecurity, we deliver excellence across the nation.
+              India&apos;s leading provider of enterprise-grade networking solutions. From MPLS to cybersecurity, we deliver excellence across the nation.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 
 // Extracted data for better organization
 const statsData = [
@@ -40,13 +39,6 @@ const governmentRecognitions = [
     image: '/images/about/startup-india.png'
   }
 ];
-
-// Reusable animation variants
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
-};
 
 const fadeInLeft = {
   initial: { opacity: 0, x: -20 },
@@ -200,44 +192,6 @@ const SectionHeader = ({ title, description, light = false }: SectionHeaderProps
   </div>
 );
 
-interface AnimatedCounterProps {
-  value: string;
-  duration?: number;
-}
-
-// Animated counter component for stats
-const AnimatedCounter = ({ value, duration = 2 }: AnimatedCounterProps) => {
-  const [count, setCount] = useState<number>(0);
-  
-  useEffect(() => {
-    let startTime: number | undefined;
-    const animateCount = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-      
-      if (value.includes('+')) {
-        const numericValue = parseInt(value);
-        setCount(Math.floor(progress * numericValue));
-      } else if (value.includes('%')) {
-        const numericValue = parseFloat(value);
-        setCount(parseFloat((progress * numericValue).toFixed(2)));
-      }
-      
-      if (progress < 1) {
-        requestAnimationFrame(animateCount);
-      }
-    };
-    
-    requestAnimationFrame(animateCount);
-  }, [value, duration]);
-  
-  return (
-    <span>
-      {value.includes('+') ? `${count}+` : value.includes('%') ? `${count}%` : count}
-    </span>
-  );
-};
-
 const About = () => {
   return (
     <div className="pt-16">
@@ -287,7 +241,7 @@ const About = () => {
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
-              India's Leading Network Infrastructure Company
+              India&apos;s Leading Network Infrastructure Company
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -324,10 +278,10 @@ const About = () => {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Journey to Excellence</h2>
               <p className="text-lg text-gray-600">
-                Founded in 2003, NetEdge Solutions has grown from a small IT networking company to one of India's most trusted network infrastructure providers. Our commitment to excellence and customer satisfaction has earned us the trust of over 500 enterprise clients across the nation.
+                Founded in 2003, NetEdge Solutions has grown from a small IT networking company to one of India&apos;s most trusted network infrastructure providers. Our commitment to excellence and customer satisfaction has earned us the trust of over 500 enterprise clients across the nation.
               </p>
               <p className="text-lg text-gray-600">
-                Today, we're proud to be at the forefront of network technology, delivering cutting-edge solutions that power businesses across India. Our team of certified professionals ensures that every project meets the highest standards of quality and reliability.
+                Today, we&apos;re proud to be at the forefront of network technology, delivering cutting-edge solutions that power businesses across India. Our team of certified professionals ensures that every project meets the highest standards of quality and reliability.
               </p>
               
               <motion.button
@@ -370,7 +324,7 @@ const About = () => {
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 italic">
-                  "NetEdge Solutions transformed our network infrastructure. Their expertise is unmatched."
+                  "                  &quot;NetEdge Solutions transformed our network infrastructure. Their expertise is unmatched.&quot;"
                 </p>
                 <p className="text-xs text-gray-500 mt-2">- CTO, Fortune 500 Company</p>
               </motion.div>

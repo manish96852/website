@@ -139,7 +139,7 @@ const CaseStudies = () => {
             Success Stories That Speak For Themselves
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Discover how we've helped businesses across India transform their network infrastructure
+            Discover how we&apos;ve helped businesses across India transform their network infrastructure
           </p>
         </motion.div>
 
